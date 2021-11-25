@@ -104,8 +104,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#define MAX_SIZE 20
-#define INIT_SIZE 5
+#define MAX_SIZE 5
 
 typedef struct Table
 {
@@ -118,19 +117,19 @@ table init_table()
 {
 	int elem = 0;
 	table t;
-	t.head = (int*)malloc(INIT_SIZE * sizeof(int));
+	t.head = (int*)malloc(MAX_SIZE * sizeof(int));
 	if (!t.head)
 	{
 		printf("分配空间失败\n");
 		exit(0);
 	}
 	t.length = 0;
-	t.size = INIT_SIZE;
+	t.size = MAX_SIZE;
 	printf("请输入元素>:\n");
-	for (int i = 0; i < INIT_SIZE; i++)
+	for (int i = 0; i < MAX_SIZE; i++)
 	{
 		scanf("%d", &elem);
-		if (t.head[i] == -1)
+		if (elem == -1)
 		{
 			break;
 		}
@@ -203,11 +202,24 @@ table delet_table(table t, int position)
 }
 int main()
 {
+	int elem = 0;
+	int position = 0;
+	int dele_position = 0;
 	table t = init_table();
 	display_table(t);
-	t = insert_table(t, 9, 3);
+
+	printf("请输入插入的元素和位置>:\n");
+	//清除缓冲区
+	getchar();
+	getchar();
+	getchar();
+	scanf("%d %d", &elem, &position);
+	t = insert_table(t, elem, position);
 	display_table(t);
-	t = delet_table(t, 3);
+
+	printf("请输入要删除的元素的位置>:\n");
+	scanf("%d", &dele_position);
+	t = delet_table(t, dele_position);
 	display_table(t);
 	return 0;
 }
