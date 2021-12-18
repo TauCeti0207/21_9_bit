@@ -18,19 +18,20 @@ void show_arr(int arr[], int sz)
 	}
 	printf("\n");
 }
-int Sequence_Search(int arr[], int sz, int value)
+void Sequence_Search(int arr[], int sz, int value)
 {
-	for (int i = 0; i < sz; i++)
+	int i = 0;
+	for (i = 0; i < sz; i++)
 	{
 		if (arr[i] == value)
 		{
 			printf("找到了,所在位置是:%d\n", i + 1);
 			break;
 		}
-		if (i == sz)
-		{
-			printf("找不到!!请确认输入值是否正确\n");
-		}
+	}
+	if (i == sz)
+	{
+		printf("找不到!!请确认输入值是否正确\n");
 	}
 }
 
@@ -53,7 +54,7 @@ void Bubble_Sort(int arr[], int sz)
 	}
 }
 
-int Binary_Search(int arr[], int sz, int value2)
+void Binary_Search(int arr[], int sz, int value2)
 {
 	int left = 0;
 	int right = sz - 1;

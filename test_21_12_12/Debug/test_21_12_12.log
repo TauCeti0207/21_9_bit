@@ -1,3 +1,2 @@
 ﻿  test.c
-D:\work-software\git clone\C_Code\test_21_12_12\test.c(81): warning C4716: “Binary_Search”: 必须返回一个值
-D:\work-software\git clone\C_Code\test_21_12_12\test.c(35): warning C4716: “Sequence_Search”: 必须返回一个值
+  test_21_12_12.vcxproj -> D:\work-software\git clone\C_Code\test_21_12_12\Debug\test_21_12_12.exe
