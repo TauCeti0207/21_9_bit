@@ -1,4 +1,2 @@
-﻿  student.c
-D:\work-software\git clone\C_Code\test_21_12_18\student.c(103): warning C4715: “Student_SearchByIndex”: 不是所有的控件路径都返回值
-D:\work-software\git clone\C_Code\test_21_12_18\student.c(150): warning C4715: “average_score_one_course”: 不是所有的控件路径都返回值
+﻿  test.c
   test_21_12_18.vcxproj -> D:\work-software\git clone\C_Code\test_21_12_18\Debug\test_21_12_18.exe

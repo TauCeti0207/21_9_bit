@@ -131,7 +131,7 @@ float average_score_one_course()
     char input[20];
     printf("请输入要求平均分的课程>:\n");
     scanf("%s", &input);
-    if (strcmp(input,"数学") == 0)
+    if (strcmp(input, "英语") == 0)
     {
         for (int i = 0; i <= num; i++)
         {
@@ -139,12 +139,36 @@ float average_score_one_course()
         }
         return sum / num;
     }
-    else if(strcmp(input, "英语") == 0)
+    else if(strcmp(input, "数学") == 0)
     {
-        for (int i = 0; i < num; i++)
+        for (int i = 0; i <= num; i++)
         {
              sum = sum + students[i].English_Score;
         }
         return sum / num;
+    }
+    else
+    {
+        printf("未查到,请重新输入\n");
+    }
+}
+
+//按总成绩排序
+void sort_score_all()
+{
+    int i = 0;
+    int j = 0;
+    struct Student tmp;
+    for (i = 0; i < num; i++)
+    {
+        for (j = 1; j < num - i; j++)
+        {
+            if (students[j - 1].Score < students[j].Score)
+            {
+                tmp = students[j - 1];
+                students[j - 1] = students[j];
+                students[j] = tmp;
+            }
+        }
     }
 }

@@ -17,6 +17,9 @@ void menu()
 
 char name[20] = { 0 };
 char ID[20] = { 0 };
+float ave = 0;
+extern sum;
+extern num;
 void test()
 {
 	int input = 0;
@@ -38,7 +41,7 @@ void test()
 			scanf("%s", name);
 			int num = Student_SearchByName(name);
 			float sum = score_sum_student(num);
-			printf("该学生成绩为:%d\n", sum);
+			printf("该学生成绩为:%.2lf\n", sum);
 			break;
 		case 4:
 			printf("请输入学生的ID>:\n");
@@ -46,10 +49,13 @@ void test()
 			show_student_byID(ID);
 			break;
 		case 5:
-			printf("该课程平均分为:%d\n", average_score_one_course());
+			ave = average_score_one_course();
+			printf("该课程平均分为:%.2lf\n",ave);
 			break;
 		case 6:
-			//sort_score_all();
+			sort_score_all();
+			printf("按总成绩排序完成后:\n");
+			show_student_all(3);
 			break;
 		case 0:
 			printf("退出学生成绩管理系统\n");
