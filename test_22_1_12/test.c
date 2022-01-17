@@ -84,14 +84,14 @@
 
 #include <stdio.h>
 #include<assert.h>
-void Sort_even_odd(int* arr,int sz)
+void Sort_even_odd(int* arr, int sz)
 {
-	assert( arr != NULL);
+	assert(arr != NULL);
 	int i = 0;
 	int* left = arr;
 	int* right = arr + sz - 1;
 	int tmp = 0;
-	while (left<right)
+	while (left < right)
 	{
 		while (*left % 2 == 1)
 		{
@@ -119,7 +119,7 @@ int main()
 		printf("%d ", arr[i]);
 	}
 	printf("\n");
-	Sort_even_odd(arr,sz);
+	Sort_even_odd(arr, sz);
 	printf("修改后的数组为：\n");
 	for (int i = 0; i < 10; i++)
 	{
