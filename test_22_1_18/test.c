@@ -80,20 +80,24 @@
 
 #include<stdio.h>
 #include<math.h>
-#define EPS 0.00000001
+#include<float.h>
 int main()
 {
 	double x = 1.0;
 	double y = 0.1;
 	printf("%.50f\n", x - 0.9);
 	printf("%.50f\n", y);
-	if(fabs((x-0.9) - y) < EPS)
+	if(fabs((x-0.9) - y) < DBL_EPSILON)
 	{
 		printf("1\n");
 	}
 	else
 	{
 		printf("2\n");
+	}
+	if (fabs(x-0) < FLT_EPSILON)
+	{
+		//...
 	}
 	return 0;
 }
