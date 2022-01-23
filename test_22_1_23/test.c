@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS 1
 
 //int main()
 //{
@@ -96,13 +97,69 @@
 //    return 0;
 //}
 
-#include<stdio.h>
-#include<memory.h>
+//#include<stdio.h>
+//#include<memory.h>
+//int main()
+//{
+//	int arr1[] = { 1,2,3,4,5 };
+//	int arr2[] = { 1,2,3,4,5 };
+//	int ret = memcmp(arr1, arr2, 8);
+//	printf("%d\n", ret);//0	前8个字节都相等返回0
+//	return 0;
+//}
+//#include<stdio.h>
+//#include<memory.h>
+//int main()
+//{
+//	char arr[20] = { 0 };
+//	memset(arr, 'x', 10);//前10个字符被改成x
+//	for (size_t i = 0; i < 20; i++)
+//	{
+//		printf("%c ", arr[i]);//x x x x x x x x x x
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//#include<memory.h>
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	memset(arr, 0, 10);
+//	for (size_t i = 0; i < 10; i++)
+//	{
+//		printf("%d ", arr[i]);//0 0 0 4 5 6 7 8 9 10
+//	}
+//	//01 00 00 00	02 00 00 00	 03 00 00 00 ...小端存储
+//	//00 00 00 00   00 00 00 00  00 00 00 00 ...
+//	return 0;
+//}
+
+//struct Stu
+//{
+//    char name[20];
+//    int age;
+//    char sex[5];
+//    int hight;
+//}s2,s3,s4;//全局变量
+//
+//struct Stu s5;//全局变量
+//
+//int main()
+//{
+//    struct Stu s1;//结构体变量，局部变量
+//    return 0;
+//}
+
+//代码3
+typedef struct
+{
+	int data;
+	Node* next;
+}Node;
+//这样写代码，可行否？
 int main()
 {
-	int arr1[] = { 1,2,3,4,5 };
-	int arr2[] = { 1,2,3,4,5 };
-	int ret = memcmp(arr1, arr2, 8);
-	printf("%d\n", ret);//0	前8个字节都相等返回0
+	Node n;//报错
 	return 0;
 }
