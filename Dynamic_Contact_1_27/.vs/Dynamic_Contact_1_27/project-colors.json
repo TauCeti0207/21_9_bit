@@ -1,5 +1,11 @@
 {
   "Version": 1,
-  "ProjectMap": {},
-  "NextColorIndex": 0
+  "ProjectMap": {
+    "a682144c-aad3-4c43-8e16-28654de2cac9": {
+      "ProjectGuid": "a682144c-aad3-4c43-8e16-28654de2cac9",
+      "DisplayName": "Dynamic_Contact_1_27",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
 }
