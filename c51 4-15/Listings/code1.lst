@@ -1,0 +1,42 @@
+A51 MACRO ASSEMBLER  CODE1                                                                05/03/2022 22:46:50 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\code1.obj
+ASSEMBLER INVOKED BY: D:\work-software\Keil5\C51\BIN\A51.EXE code1.asm SET(SMALL) DEBUG PRINT(.\Listings\code1.lst) OBJE
+                      CT(.\Objects\code1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 020040            2                     LJMP MAIN
+0040                   3                     ORG 0040H
+0040                   4     MAIN:   
+                       5                     ;实现(30H)= 78H  (40H) = 37H  (41H) = 38H
+0040 E530              6                     MOV A, 30H;30H里面是78H
+0042 540F              7                     ANL A, #0FH; 高四位置为0，低四位不变 08H
+0044 4430              8                     ORL A, #30H; -->38H
+0046 F541              9                     MOV 41H, A; 放到41H里面
+                      10                     
+0048 E530             11                     MOV A, 30H  ; 
+004A C4               12                     SWAP A; A中内容高低字节互换 87H
+004B 540F             13                     ANL A, #0FH; -->07H
+004D 4430             14                     ORL A, #30H; -->37H
+004F F540             15                     MOV 40H, A; 送入40H中
+                      16                     
+                      17                     END
+A51 MACRO ASSEMBLER  CODE1                                                                05/03/2022 22:46:50 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+MAIN . . . . . . .  C ADDR   0040H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

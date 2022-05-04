@@ -1,0 +1,43 @@
+A51 MACRO ASSEMBLER  TEST                                                                 05/03/2022 21:43:25 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\test.obj
+ASSEMBLER INVOKED BY: D:\work-software\Keil5\C51\BIN\A51.EXE test.asm SET(SMALL) DEBUG PRINT(.\Listings\test.lst) OBJECT
+                      (.\Objects\test.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 020040            2                     LJMP MAIN
+0040                   3                     ORG 0040H
+0040 747F              4     MAIN:   MOV A, #7FH
+0042 F590              5     LOOP:   MOV P1, A
+0044 03                6                     RR A
+0045 12004A            7                     LCALL DELAY
+0048 80F8              8                     SJMP LOOP
+004A 7F64              9     DELAY:  MOV R7, #100    ;1个机器周期
+004C 7E64             10     WAIT:   MOV R6, #100    ;1
+004E DEFE             11                     DJNZ R6, $          ;2
+0050 DFFA             12                     DJNZ R7,WAIT    ;2
+0052 22               13                 RET             ;2
+                      14                     END
+A51 MACRO ASSEMBLER  TEST                                                                 05/03/2022 21:43:25 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY. . . . . . .  C ADDR   004AH   A   
+LOOP . . . . . . .  C ADDR   0042H   A   
+MAIN . . . . . . .  C ADDR   0040H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+WAIT . . . . . . .  C ADDR   004CH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

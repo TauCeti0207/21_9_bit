@@ -1,0 +1,48 @@
+A51 MACRO ASSEMBLER  DELAY1S                                                              05/04/2022 19:56:01 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\delay1s.obj
+ASSEMBLER INVOKED BY: D:\work-software\Keil5\C51\BIN\A51.EXE delay1s.asm SET(SMALL) DEBUG PRINT(.\Listings\delay1s.lst) 
+                      OBJECT(.\Objects\delay1s.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 020040            2                     LJMP MAIN
+0040                   3                     ORG 0040H
+0040 747F              4     MAIN:   MOV A, #7FH
+0042 F590              5     LOOP:   MOV P1, A
+0044 03                6                     RR A
+0045 12004A            7                     LCALL DELAY
+0048 80F8              8                     SJMP LOOP
+                       9                     
+                      10                     ; 延时 1+1+1+((2*249+2)*199+2)*10+2 = 995025指令周期 
+004A 7F0A             11     DELAY:  MOV R7, #10     ;1机器周期 
+004C 7EC7             12     DL1:    MOV R6, #199
+004E 7DF9             13     DL2:    MOV R5, #249    ;1                 
+0050 DDFE             14                     DJNZ R5, $          ;2  while(R5)   R5--
+0052 DEFA             15                     DJNZ R6, DL2    ;2
+0054 DFF6             16                     DJNZ R7, DL1    ;2  IF(R7!=0)  LJMP:WAIT
+0056 22               17                 RET             ;2
+                      18                     END
+A51 MACRO ASSEMBLER  DELAY1S                                                              05/04/2022 19:56:01 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY. . . . . . .  C ADDR   004AH   A   
+DL1. . . . . . . .  C ADDR   004CH   A   
+DL2. . . . . . . .  C ADDR   004EH   A   
+LOOP . . . . . . .  C ADDR   0042H   A   
+MAIN . . . . . . .  C ADDR   0040H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

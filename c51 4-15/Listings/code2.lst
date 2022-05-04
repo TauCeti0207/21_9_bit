@@ -1,0 +1,45 @@
+A51 MACRO ASSEMBLER  CODE2                                                                05/04/2022 18:44:22 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\code2.obj
+ASSEMBLER INVOKED BY: D:\work-software\Keil5\C51\BIN\A51.EXE code2.asm SET(SMALL) DEBUG PRINT(.\Listings\code2.lst) OBJE
+                      CT(.\Objects\code2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 020040            2                     LJMP MAIN
+0040                   3                     ORG 0040H
+0040                   4     MAIN:   
+                       5     ;假设(31H)=37H,(32H)=38H
+                       6     ;实现(42H)= 78
+                       7     
+                       8                     ; 操作31H
+0040 753137            9                     MOV 31H, #37H ;赋初值37H,38H
+0043 753238           10                     MOV 32H, #38H
+0046 E531             11                     MOV A, 31H;
+0048 C4               12                     SWAP A; 交换，-->73H
+0049 54F0             13                     ANL A, #0F0H; 73H-->70H
+004B F542             14                     MOV 42H, A; 放到42H里面
+                      15                     
+                      16                     ; 操作32H
+004D E532             17                     MOV A, 32H  ; 
+004F 540F             18                     ANL A, #0FH; -->08H
+0051 4242             19                     ORL 42H, A ; 70|08 -->(42H)=78H
+                      20                     END
+A51 MACRO ASSEMBLER  CODE2                                                                05/04/2022 18:44:22 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+MAIN . . . . . . .  C ADDR   0040H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

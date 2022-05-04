@@ -1,0 +1,35 @@
+A51 MACRO ASSEMBLER  EXAMPLE                                                              05/04/2022 19:20:44 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\example.obj
+ASSEMBLER INVOKED BY: D:\work-software\Keil5\C51\BIN\A51.EXE example.asm SET(SMALL) DEBUG PRINT(.\Listings\example.lst) 
+                      OBJECT(.\Objects\example.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1                     ORG 0000H
+0000 020040            2                     LJMP MAIN
+0040                   3                     ORG 0040H
+0040 747F              4     MAIN:   MOV A, #7FH
+0042 F590              5     LOOP:   MOV P1, A
+0044 03                6                     RR A
+0045 80FB              7                     SJMP LOOP
+                       8                     END
+A51 MACRO ASSEMBLER  EXAMPLE                                                              05/04/2022 19:20:44 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP . . . . . . .  C ADDR   0042H   A   
+MAIN . . . . . . .  C ADDR   0040H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
