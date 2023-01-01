@@ -1,0 +1,17 @@
+﻿  test.c
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(21,14): warning C4133: “return”: 从“Lnode *”到“int *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(25,17): warning C4133: “=”: 从“Lnode *”到“int *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(31,22): warning C4133: “!=”: 从“Lnode *”到“int *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(33,15): warning C4133: “=”: 从“int *”到“Lnode *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(35,14): warning C4133: “=”: 从“Lnode *”到“int *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(36,14): warning C4133: “=”: 从“Lnode *”到“int *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(38,13): warning C4133: “return”: 从“Lnode *”到“int *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(47,47): warning C4133: “=”: 从“int *”到“Lnode *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(49,13): warning C4133: “return”: 从“Lnode *”到“int *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(59,14): warning C4133: “=”: 从“int *”到“Lnode *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(74,12): warning C4133: “return”: 从“Lnode *”到“int *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(75,14): warning C4133: “=”: 从“int *”到“Lnode *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(85,34): warning C4133: “=”: 从“int *”到“Lnode *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(91,28): warning C4133: “=”: 从“int *”到“Lnode *”的类型不兼容
+D:\work-software\git clone\C_Code\test_21_11_27\test.c(94,34): warning C4133: “=”: 从“int *”到“Lnode *”的类型不兼容
+  test_21_11_27.vcxproj -> D:\work-software\git clone\C_Code\test_21_11_27\Debug\test_21_11_27.exe

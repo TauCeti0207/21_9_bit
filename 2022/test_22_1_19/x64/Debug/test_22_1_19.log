@@ -1,0 +1,4 @@
+﻿  test.c
+D:\work-software\git clone\C_Code\test_22_1_19\test.c(244,21): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\work-software\git clone\C_Code\test_22_1_19\test.c(245,21): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  test_22_1_19.vcxproj -> D:\work-software\git clone\C_Code\test_22_1_19\x64\Debug\test_22_1_19.exe
